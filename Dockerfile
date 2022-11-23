@@ -11,6 +11,7 @@ RUN apt install -y /openerp-client_6.0.0~rc2-0_all.deb
 RUN apt install -y python-lxml
 RUN apt install -y liburi-encode-perl
 RUN apt install -y libcanberra-gtk-module
+RUN apt install -y libcanberra-gtk3-module
 RUN apt install -y python-egenix-mxdatetime
 RUN apt install -y python-egenix-mxtools
 RUN apt install dbus-x11
