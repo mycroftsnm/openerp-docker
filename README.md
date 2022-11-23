@@ -17,7 +17,7 @@ then run it with the provided compose.yml (edit as required)
 
 or with docker run 
 
-`docker run --net=host -e DISPLAY=$DISPLAY -v=/folder/to/use/as/home/:/home/user:rw --user=1000:1000  -it openerp-docker:latest 
+`docker run --net=host -e DISPLAY=$DISPLAY -v=/folder/to/use/as/home/:/home/user:rw --user=1000:1000  -it openerp-docker:latest `
 
 ## Building 
 
