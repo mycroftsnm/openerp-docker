@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  openerp:
+    container_name: openerp
+    image: openerp-docker:latest
+    user: 1000:1000 # should be owner of volumes
+    network_mode: host
+    environment:
+      DISPLAY: $DISPLAY
+    volumes:
+      - "./foo:/home/user:rw"  #folder to use as home (to save pdfs, an keep openerp config)
+      - "/var/run/cups/cups.sock:/var/run/cups/cups.sock:rw" #to use the printers which are available on the host.
