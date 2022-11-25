@@ -14,6 +14,9 @@ RUN apt install -y libcanberra-gtk-module
 RUN apt install -y libcanberra-gtk3-module
 RUN apt install -y python-egenix-mxdatetime
 RUN apt install -y python-egenix-mxtools
+RUN apt install -y python-gtk2-dev
+RUN apt install -y python-pip
+RUN pip2 install matplotlib==1.5.3 --no-binary=matplotlib
 RUN apt install dbus-x11
 RUN useradd user -m -u 1000
 CMD ["/usr/bin/openerp-client"]
