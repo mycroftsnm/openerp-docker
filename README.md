@@ -3,22 +3,34 @@ Docker container for running openerp client v6
 
 ## Running 
 
-Download the compressed image in the Releases section and install it
+1. Download the compressed image in the Releases section and install it
 
-`docker load openerp-docker.tar.gz`
+    ```  
+    docker load openerp-docker.tar.gz
+    ```
+  
+2. Allow docker to access the running X server on host
 
-Allow docker to access the running X server on host
+    ```  
+    xhost +local:docker
+    ```  
 
-`xhost +local:docker`
+3. Run it with the provided [compose file](compose.yml) (edit as required)
 
-then run it with the provided compose.yml (edit as required)
+    ```  
+    docker compose up -d
+    ```  
 
-`docker compose up -d`
 
-or with docker run 
+    or with docker run 
 
-`docker run --net=host -e DISPLAY=$DISPLAY -v=/folder/to/use/as/home/:/home/user:rw --user=1000:1000  -it openerp-docker:latest `
+    ```  
+    docker run --net=host -e DISPLAY=$DISPLAY -v=/folder/to/use/as/home/:/home/user:rw --user=1000:1000  -it openerp-docker:latest 
+    ```  
 
 ## Building 
 
-WIP
+Clone the repo, cd into and build it with:
+
+    docker build -t openerp-docker . 
+
