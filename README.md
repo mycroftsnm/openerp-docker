@@ -6,7 +6,7 @@ Docker container for running openerp client v6
 1. Download the compressed image in the Releases section and install it
 
     ```  
-    docker load openerp-docker.tar.gz
+    docker load -i openerp-docker.tar.gz
     ```
   
 2. Allow docker to access the running X server on host
